@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Calc</h1>
+
+    <label for="addend1">Addend 1</label>
+    <input id="addend1" type="number">
+
+    <label for="addend2">Addend 2</label>
+    <input id="addend2" type="number">
+
+    <button onclick="doSum()">Sum</button>
+
+    <div>El Resultado es: <span id="result">0</span></div>
+
+    <script>
+        function suma(n1, n2) {
+            var result = n1 + n2
+            return result
+        }
+
+        function doSum() {
+            var addend1 = parseFloat(document.getElementById("addend1").value)
+            var addend2 = parseFloat(document.getElementById("addend2").value)
+
+            var result = suma(addend1, addend2)
+
+            document.getElementById("result").innerHTML = result
+        }
+    </script>
+</body>
+
+</html>
